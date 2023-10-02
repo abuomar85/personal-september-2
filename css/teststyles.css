@@ -1,0 +1,64 @@
+#container {
+    background-color: darkgray;
+    width: 300px;
+    margin: 50px auto;
+    border: 5px solid black;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  }
+  #container .trafficLight, #container .trafficLight--go, #container .trafficLight--slow, #container .trafficLight--stop {
+    padding: 10px 20px;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: darkgray;
+    color: white;
+    margin: 10px auto;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 78%, black 100%);
+  }
+  #container .trafficLight:hover, #container .trafficLight--go:hover, #container .trafficLight--slow:hover, #container .trafficLight--stop:hover {
+    border-color: yellow;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  }
+  #container .trafficLight:active, #container .trafficLight--go:active, #container .trafficLight--slow:active, #container .trafficLight--stop:active {
+    transform: scale(0.9);
+  }
+  #container .trafficLight--stop {
+    background-color: red;
+  }
+  #container .trafficLight--slow {
+    background-color: orange;
+  }
+  #container .trafficLight--go {
+    background-color: green;
+  }
+  
+  #container {
+    background-color: darkgray;
+    width: 300px;
+    margin: 50px auto;
+    border: 5px solid black;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  }
+  #container .trafficLight, #container .trafficLight--stop, #container .trafficLight--slow, #container .trafficLight--go {
+    padding: 10px 20px;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: darkgray;
+    color: white;
+    margin: 10px auto;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 78%, black 100%);
+  }
+  #container .trafficLight--stop {
+    background-color: red;
+  }
+  #container .trafficLight--slow {
+    background-color: orange;
+  }
+  #container .trafficLight--go {
+    background-color: green;
+  }

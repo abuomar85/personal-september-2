@@ -1,0 +1,213 @@
+/*
+بمجرد الانتهاء من الإصدار الأولي لموقع الويب الخاص بك في نهاية هذه الدورة، نوصي بالقيام بما يلي:
+
+قم بتشغيل CSS المنقول من خلال البادئة التلقائية (أو أي معالج لاحق آخر تقرر استخدامه).
+قم بإنشاء ملف CSS جديد يسمى "style.production.css" والصق الإخراج من البادئة التلقائية في هذا الملف.
+قم بتحديث الروابط الخاصة بك في رأس ملف CSS إلى ملف "style.production.css" الجديد.
+تأكد من الاحتفاظ بنسخة من ملف "styles.css" الأصلي. إذا كنت تريد إجراء أي تغييرات لاحقًا، فمن الأفضل إجراء ذلك في هذا الملف وتكرار العملية مرة أخرى.
+*/
+
+/*
+
+
+
+
+*/
+  
+
+a {
+    color: #357b70;
+  }
+  
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #056056
+}
+
+a:active {
+    color: #dad737
+}
+
+
+ .profile__photo {
+    float: right;
+    width: 250px;
+    margin-left: 40px;
+    border-radius: 50%;
+ }
+
+ .page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+ }
+
+ .profile {
+    max-width: 700px;
+    margin: 0 auto;
+ }
+
+
+
+ .s-media {
+
+ }
+
+ .flex-item {
+    background-color: rgba(100, 100, 150, 1);
+    height: 75px;
+    margin: 10px;
+    text-align: center;
+    color: white;
+    line-height: 75px;
+    flex-basis: 20px;
+    flex-shrink: 1;
+ }
+
+ .test-container{
+    display: flex;
+    justify-content: space-between;
+ }
+
+.flex-item:last-child {
+    flex-grow: 3;
+}
+
+.page-header {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+
+.page-header__item {
+    flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.navigation-list {
+    list-style-type: none;
+}
+
+.navigation-list li {
+    display: inline-block;
+    margin-left: 15px;     
+}
+
+.navigation-list__item--active {
+    text-decoration: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+}
+
+.grid__item {
+    background-color: lightblue;
+    padding: 10px;
+}
+
+.grid__item:last-child {
+    grid-column: 3/3;
+    grid-row: 1/3;
+}
+
+/*إجراءات احتياطية في حال كان السي اس اس جريد لا يعمل */
+
+.grid__item {
+    display: inline-block;
+    width: 33px;
+}
+
+@supports(display: grid) {
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        margin: 0;
+    }
+    .grid__item {
+        background-color: lightblue;
+        width: auto;
+        min-height: auto;
+        margin: 0;
+    }
+
+    .grid__item:last-child {
+        grid-column: 3/3;
+        grid-row: 1/3;
+
+    }
+
+}
+
+@media all and (max-width: 500px) {
+    .grid {
+        grid-template-columns: 1fr;
+
+         
+    }
+
+
+}
+
+ @media all and (min-width: 500px) and (max-width: 750px) {
+
+    .grid {
+        grid-template-columns: 1fr 1fr; 
+
+         
+    }
+
+
+} 
+
+@media all and (max-width: 750px) {
+    .grid {
+        grid-gap: 10px;
+
+    }
+
+    .grid__item:last-child {
+        grid-column: auto/auto;
+        grid-row: auto/auto;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
